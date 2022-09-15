@@ -1,17 +1,27 @@
+/* Typography */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap');
+
+/* Typography End */
+
+
 :root {
     /* Uncomment the code below and change the color scheme if desired https://www.w3schools.com/css/css3_variables.asp */
-    /* --primary: rgba(43, 91, 186, 0.6);
-    --light: rgb(255,255,255);
-    --greyish: rgb(116 121 129 / 80%); */
+    --primary: rgba(169, 141, 182, 0.6);
+    --light: rgb(255, 255, 255);
+    --greyish: rgba(0, 0, 0, 0.8);
+    ;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background-color:rgb(14, 13, 13);
+    background-color: rgb(14, 13, 13);
 }
 
 a {
@@ -19,10 +29,10 @@ a {
 }
 
 .custom-resume {
-    background-color:var(--light);
+    background-color: var(--light);
 }
 
-.custom-resume > div {
+.custom-resume>div {
     min-height: 30rem;
 }
 
@@ -45,15 +55,15 @@ a {
     color: var(--light);
 }
 
-.custom-profile > * {
+.custom-profile>* {
     background-color: var(--primary);
 }
 
-.custom-profile > div:last-child span {
+.custom-profile>div:last-child span {
     flex-basis: 15%;
 }
 
-.custom-profile > :last-child {
+.custom-profile> :last-child {
     background-color: rgba(68, 106, 182, .5);
 }
 
@@ -69,26 +79,35 @@ a {
     color: var(--greyish);
 }
 
-img + p > span {
+img+p>span {
     display: block;
+}
+
+ul {
+    font-size: 0.7rem;
 }
 
 /* Explain in comments below what the media queries are doing in regards to different screen sizes */
 
-@media screen and (max-width: 992px){
+/* Changing the font size to 0.8rem on screens smaller than 992px wide  */
+@media screen and (max-width: 992px) {
     .custom-text-cont p {
         font-size: 0.8rem;
     }
 }
 
-@media screen and (max-width: 768px){
-    .custom-resume > div > div:first-child {
+/* Changes the order of the layout in the container by ascending order and increases the size of the container on screens smaller than 768px wide */
+
+@media screen and (max-width: 768px) {
+    .custom-resume>div>div:first-child {
         order: 2;
     }
-    .custom-resume > div > div:last-child {
+
+    .custom-resume>div>div:last-child {
         order: 1;
     }
-    .custom-resume > div > div:last-child span {
+
+    .custom-resume>div>div:last-child span {
         flex-basis: 6%;
     }
 }
